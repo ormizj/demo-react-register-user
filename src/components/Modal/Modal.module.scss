@@ -1,0 +1,22 @@
+.modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.33);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.error-message-header {
+  color: white;
+}
+
+.ok-button {
+  display: flex;
+  justify-content: end;
+}
