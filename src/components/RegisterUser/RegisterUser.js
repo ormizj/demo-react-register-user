@@ -3,11 +3,13 @@ import React, { useState } from "react";
 import styles from "./RegisterUser.module.scss";
 import Card from "components/Card/Card";
 
+const userInputsInitial = {
+  username: "",
+  age: "",
+};
+
 const RegisterUser = (props) => {
-  const [userInputs, setUserInputs] = useState({
-    username: "",
-    age: "",
-  });
+  const [userInputs, setUserInputs] = useState(userInputsInitial);
 
   const userInputsHandler = (key, value) => {
     setUserInputs((prevUserInputs) => ({
@@ -16,7 +18,11 @@ const RegisterUser = (props) => {
     }));
   };
 
-  const submitHandler = () => {};
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const isRegisterSuccessful = props.onRegisterUser(userInputs);
+    if (isRegisterSuccessful) setUserInputs(userInputsInitial);
+  };
 
   return (
     <Card>
@@ -37,6 +43,7 @@ const RegisterUser = (props) => {
           </label>
           <input
             id="age"
+            type="number"
             onChange={(e) => userInputsHandler("age", e.target.value)}
             value={userInputs.age}
           />

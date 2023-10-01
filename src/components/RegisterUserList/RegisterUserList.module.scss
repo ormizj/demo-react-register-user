@@ -1,0 +1,9 @@
+.registered-user {
+}
+
+.registered-user:not(:last-child) {
+  // total 5px padding (border won't "look" like its in the middle at even margin/padding)
+  margin-bottom: 1px;
+  padding-bottom: 3px;
+  border-bottom: 1px dashed black;
+}

@@ -21,6 +21,14 @@ code {
   font-weight: 700;
 }
 
+ol {
+  all: unset;
+}
+
+ol li {
+  list-style-type: none;
+}
+
 button {
   all: unset;
   border: 1px solid black;
