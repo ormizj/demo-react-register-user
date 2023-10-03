@@ -25,36 +25,10 @@ function App() {
   };
 
   const registerUserHandler = ({ username, age }) => {
-    age = +age; // cast age to number
-
-    if (!validateRegisterUser(username, age)) return false;
-
     setRegisteredUsers((oldRegisterUserList) => [
       { username, age },
       ...oldRegisterUserList,
     ]);
-    return true;
-  };
-
-  const validateRegisterUser = (username, age) => {
-    if (username.trim().length === 0) {
-      setErrMsg("Username can not be empty!");
-      return false;
-    }
-
-    if (age < 18) {
-      setErrMsg("You must be at least 18 year old to register!");
-      return false;
-    }
-
-    const doesUsernameExist = !!registeredUsers.find(
-      (user) => user.username === username
-    );
-    if (doesUsernameExist) {
-      setErrMsg("Username is already registered");
-      return false;
-    }
-
     return true;
   };
 
@@ -66,6 +40,7 @@ function App() {
       <RegisterUser
         onRegisterUser={registerUserHandler}
         onErrMsg={errMsgHandler}
+        registeredUsers={registeredUsers}
       />
       {showRegisterUserList && (
         <RegisterUserList registeredUsers={registeredUsers} />

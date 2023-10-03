@@ -21,11 +21,13 @@ code {
   font-weight: 700;
 }
 
-ol {
+ol,
+ul {
   all: unset;
 }
 
-ol li {
+ol li,
+ul li {
   list-style-type: none;
 }
 

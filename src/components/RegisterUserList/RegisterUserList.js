@@ -6,13 +6,14 @@ import Card from "components/Card/Card";
 const RegisterUserList = (props) => {
   return (
     <Card>
-      <ol>
+      {/* using "ul", not "ol" because there is no sorting to the "registeredUsers" object */}
+      <ul>
         {props.registeredUsers.map(({ username, age }) => (
           <li key={username} className={styles["registered-user"]}>
             {username} ({age} year old)
           </li>
         ))}
-      </ol>
+      </ul>
     </Card>
   );
 };
