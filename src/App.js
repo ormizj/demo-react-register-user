@@ -1,8 +1,8 @@
-import RegisterUser from "components/RegisterUser/RegisterUser";
+import RegisterUser from "components/User/RegisterUser";
 import "./App.css";
 import ErrorModal from "components/Modal/ErrorModal";
 import { useState } from "react";
-import RegisterUserList from "components/RegisterUserList/RegisterUserList";
+import RegisterUserList from "components/User/RegisterUserList";
 
 const errMsgInitial = "";
 
@@ -24,10 +24,10 @@ function App() {
     setErrMsg(errMsgInitial);
   };
 
-  const registerUserHandler = ({ username, age }) => {
-    setRegisteredUsers((oldRegisterUserList) => [
+  const registerUserHandler = (username, age) => {
+    setRegisteredUsers((prevRegisterUserList) => [
       { username, age },
-      ...oldRegisterUserList,
+      ...prevRegisterUserList,
     ]);
     return true;
   };

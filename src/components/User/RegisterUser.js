@@ -31,7 +31,7 @@ const RegisterUser = (props) => {
       return;
     }
 
-    props.onRegisterUser({ age: formatAge, username: formatUsername });
+    props.onRegisterUser(formatAge, formatUsername);
     setUserInputs(userInputsInitial);
   };
 
