@@ -43,7 +43,7 @@ const RegisterUser = (props) => {
     const doesUsernameExist = !!props.registeredUsers.find(
       (user) => user.username === formatUsername
     );
-    if (doesUsernameExist) return "Username is already registered";
+    if (doesUsernameExist) return "Username is already registered!";
 
     return "";
   };
