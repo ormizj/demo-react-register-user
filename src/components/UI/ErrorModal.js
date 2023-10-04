@@ -10,7 +10,7 @@ const ErrorModal = (props) => {
       <Card className={styles["modal-card"]}>
         <p>{props.errMsg}</p>
         <div className={styles["ok-button"]}>
-          <button onClick={props.onResetErrMsg}>Okay</button>
+          <button onClick={props.onConfirm}>Okay</button>
         </div>
       </Card>
     </div>

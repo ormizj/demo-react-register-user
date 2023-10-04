@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="App">
       {showErrorModal && (
-        <ErrorModal onResetErrMsg={resetErrMsgHandler} errMsg={errMsg} />
+        <ErrorModal onConfirm={resetErrMsgHandler} errMsg={errMsg} />
       )}
       <RegisterUser
         onRegisterUser={registerUserHandler}
