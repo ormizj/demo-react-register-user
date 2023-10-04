@@ -1,6 +1,6 @@
 import RegisterUser from "components/User/RegisterUser";
 import "./App.css";
-import ErrorModal from "components/Modal/ErrorModal";
+import ErrorModal from "components/UI/ErrorModal";
 import { useState } from "react";
 import RegisterUserList from "components/User/RegisterUserList";
 

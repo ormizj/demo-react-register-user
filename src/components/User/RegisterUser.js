@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import styles from "./RegisterUser.module.scss";
-import Card from "components/Card/Card";
+import Card from "../UI/Card";
 
 const userInputsInitial = {
   username: "",

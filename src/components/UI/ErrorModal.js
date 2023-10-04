@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./Modal.module.scss";
-import Card from "components/Card/Card";
+import Card from "./Card";
 
 const ErrorModal = (props) => {
   return (

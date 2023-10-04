@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./RegisterUserList.module.scss";
-import Card from "components/Card/Card";
+import Card from "../UI/Card";
 
 const RegisterUserList = (props) => {
   return (
